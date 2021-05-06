@@ -40,11 +40,6 @@ function setup() {
     plinkos.push(new Plinko(j,375));
   }
 
-  //create particle objects
-  if(frameCount%60===0){
-    particles.push(new Particle(random(width/2-30, width/2+30), 10,10));
-    score++;
-  }
     
 }
  
@@ -61,6 +56,12 @@ function draw() {
   //display the plinkos 
   for (var i = 0; i < plinkos.length; i++) {
     plinkos[i].display();   
+  }
+
+   //create particle objects
+  if(frameCount%60===0){
+    particles.push(new Particle(random(width/2-30, width/2+30), 10,10));
+    score++;
   }
    
   //display the divisions
